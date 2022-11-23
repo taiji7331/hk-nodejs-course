@@ -59,7 +59,7 @@ dishRouter.route('/:dishId')
 .put((req,res,next) => {
   Dishes.findByIdAndUpdate(req.params.dishId, {
     $set: req.body
-  }, { new: true})
+  }, { new: true })
   .then((dish) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
